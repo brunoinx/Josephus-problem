@@ -42,7 +42,6 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .container section form .input-group {
@@ -123,6 +122,7 @@ html, body {
   font: 18px 'Ubuntu';
   font-weight: 500;
   line-height: 24px;
+  text-align: justify;
   color: #6c3508;
 }
 
@@ -139,3 +139,5 @@ html, body {
   line-height: 18px;
   color: #6c3508;
 }
+
+/*=============== Responsividade do código=====================================*/

@@ -6,7 +6,6 @@ const survivor = document.querySelector('.survivor');
 const resultCases = document.querySelector('.resultCases');
 const orderDeaths = document.querySelector('.orderDeaths');
 
-
 btn.addEventListener('click', josephusProblem);
 
 function josephusProblem(event, soldier, k) {
@@ -21,6 +20,7 @@ function josephusProblem(event, soldier, k) {
 	
 	for (let i = 1; i <= soldier; i++) qtdSoldiers.push(i);
 
+	// Uma condição que só permite iniciar o jogo com 2 pessoas ou mais
 	if (qtdSoldiers.length <= 1) {
 		survivor.innerHTML =  '<h3>Impossivel jogar com menos de 2 jogadores...</h3>';
 	} else {
@@ -31,6 +31,7 @@ function josephusProblem(event, soldier, k) {
 				deathOrder.push(qtdSoldiers.shift());
 			}
 			
+			// retorna um numero específico de mortes, de acordo com o tamanho do salto - 1;
 			for (let i = 1; i <= (k-1); i++) {
 				let lastDeaths = deathOrder.filter((elem, idx) => idx > 
 					deathOrder.length - k
@@ -48,5 +49,4 @@ function josephusProblem(event, soldier, k) {
 
 		survivor.innerHTML = `<h3>O sobrevivente  foi o soldado na posição N°${qtdSoldiers[0]}</h3>`;
 	}
-	
 }
