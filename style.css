@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #00C8E9;
+  width: 100%;
+}
+
+.container {
+  background-color: #fff;
+  width: 80%;
+  height: 100%;
+  max-width: 680px;
+  margin: 5% auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.container section {
+  width: 90%;
+  margin: 20px auto;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container section h1 {
+  font: 38px 'Ubuntu';
+  text-align: center;
+  font-weight: bold;
+  color: #6c3508;
+  margin-bottom: 20px;
+}
+
+.container section form {
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.container section form .input-group {
+  width: 50%;
+  height: 100%;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container section form .input-group label {
+  font: 18px 'Ubuntu';
+  font-weight: bold;
+  line-height: 16px;
+  color: #6c3508;
+}
+
+.container section form .input-group input {
+  width: 36%;
+  height: 46px;
+  margin: 5px 0 8px;
+  padding: 2px 8px;
+  border-radius: 16px;
+  border: 2px solid #00C8E9;
+  outline: 0;
+  font: 1.6rem 'Ubuntu';
+  background-color: #F8F8FC;
+}
+
+.container section form .input-group input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+
+.container section form button {
+  border-radius: 8px;
+  height: 46px;
+  width: 30%;
+  background: #00C8E9;
+  color: #FFF;
+  font: 18px 'Ubuntu';
+  font-weight: bold;
+  border: none;
+  transition: opacity 0.3s;
+}
+.container section form button:hover {
+  opacity: 0.6;
+}
+
+.container .result-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  width: 90%;
+}
+
+.container .resultCases {
+  width: 40%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .resultCases p {
+  list-style: none;
+  font: 16px 'Ubuntu';
+  line-height: 24px;
+  font-weight: 500;
+  color: #6c3508;
+  margin-bottom: 10px;
+}
+.container .orderDeaths {
+  width: 50%;
+}
+
+.container .orderDeaths p {
+  font: 18px 'Ubuntu';
+  font-weight: 500;
+  line-height: 24px;
+  color: #6c3508;
+}
+
+.container  .survivor {
+  margin: 30px auto 16px;
+  width: 90%;
+  max-width: 460px;
+}
+
+.container  .survivor h3 {
+  font: 20px 'Ubuntu';
+  font-weight: bold;
+  padding: 10px;
+  line-height: 18px;
+  color: #6c3508;
+}
