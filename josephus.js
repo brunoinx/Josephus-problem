@@ -37,6 +37,10 @@ function josephusProblem(event, soldier, k) {
 					deathOrder.length - k
 				).join(', ');
 
+				if (k >= 3) {
+					arrayCases.push(lastDeaths);
+					break;
+				}
 				arrayCases.push(lastDeaths);
 			}
 		}
