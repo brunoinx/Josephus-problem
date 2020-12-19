@@ -1,12 +1,26 @@
 const inputSoldiers = document.querySelector('.totSoldiers');
 const inputJump = document.querySelector('.jumpSize');
 const btn = document.querySelector('.btn');
+const btnTop = document.querySelector('.btn-group');
 
 const survivor = document.querySelector('.survivor');
 const resultCases = document.querySelector('.resultCases');
 const orderDeaths = document.querySelector('.orderDeaths');
 
+function showButtonBackTop() {
+	btnTop.classList.add("btn-style");
+}
+
 btn.addEventListener('click', josephusProblem);
+
+btnTop.addEventListener('click', () => {
+	const btnScrollTop = window.scrollY;
+
+  window.scrollTo({
+    top: -btnScrollTop,
+		behavior: "smooth",
+  });
+});
 
 function josephusProblem(event, soldier, k) {
 	event.preventDefault();
@@ -16,8 +30,7 @@ function josephusProblem(event, soldier, k) {
 
 	let qtdSoldiers = [];
 	let deathOrder = [];
-	let arrayCases = [];
-	
+
 	for (let i = 1; i <= soldier; i++) qtdSoldiers.push(i);
 
 	// Uma condição que só permite iniciar o jogo com 2 pessoas ou mais
@@ -25,27 +38,14 @@ function josephusProblem(event, soldier, k) {
 		survivor.innerHTML =  '<h3>Impossivel jogar com menos de 2 jogadores...</h3>';
 	} else {
 		while (qtdSoldiers.length !== 1) {
-			qtdSoldiers.push(qtdSoldiers.shift());
-
-			for (let i = 1; i <= (k-1) && qtdSoldiers.length !== 1; i++) {
-				deathOrder.push(qtdSoldiers.shift());
+			for (let i=1; i < k; i++) {
+				qtdSoldiers.push(qtdSoldiers.shift());
 			}
-			
-			// retorna um numero específico de mortes, de acordo com o tamanho do salto - 1;
-			for (let i = 1; i <= (k-1); i++) {
-				let lastDeaths = deathOrder.filter((elem, idx) => idx > 
-					deathOrder.length - k
-				).join(', ');
 
-				if (k >= 3) {
-					arrayCases.push(lastDeaths);
-					break;
-				}
-				arrayCases.push(lastDeaths);
-			}
+			deathOrder.push(qtdSoldiers.shift());
 		}
 
-		resultCases.innerHTML = arrayCases.map((elem, idx) => 
+		resultCases.innerHTML = deathOrder.map((elem, idx) => 
 			`<p>Case ${idx+1}: ${elem}</p>`
 		).join(' ');
 
@@ -53,4 +53,15 @@ function josephusProblem(event, soldier, k) {
 
 		survivor.innerHTML = `<h3>O sobrevivente  foi o soldado na posição N°${qtdSoldiers[0]}</h3>`;
 	}
+
+	scrollToEnd();
+}
+
+function scrollToEnd() {
+  const btnScrollEnd = document.body.scrollHeight;
+
+  window.scrollTo({
+    top: btnScrollEnd,
+    behavior: "smooth"
+  });
 }

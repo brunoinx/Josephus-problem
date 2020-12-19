@@ -7,32 +7,40 @@
   <title>The Josephus Problem</title>
 </head>
 <body>
-  <div class="container">
-    <section>
-      <h1>Probrema de Josephus</h1>
+  <main>
+    <div class="container">
+      <section>
+        <h1>Problema de Josephus</h1>
 
-      <form>
-        <div class="input-group">
-          <label>Numero de pessoas:</label>
-          <input class="totSoldiers" type="number" />
+        <form>
+          <div class="input-group">
+            <label>Numero de pessoas:</label>
+            <input class="totSoldiers" type="number" />
 
-          <label>Tamanho do salto:</label>
-          <input class="jumpSize" type="number" />
-        </div>
+            <label>Tamanho do salto:</label>
+            <input class="jumpSize" type="number" />
+          </div>
 
-        <button class="btn">Começar</button>
-      </form>
-    </section>
+          <button onclick="showButtonBackTop()" class="btn">Começar</button>
+        </form>
+      </section>
 
-    <div class="result-group">
-      <div class="resultCases"></div>
+      <div class="result-group">
+        <div class="resultCases"></div>
 
-      <div class="orderDeaths"></div>
+        <div class="orderDeaths"></div>
+      </div>
+
+      <div class="survivor"></div>
     </div>
 
-    <div class="survivor"></div>
-  </div>
-  
+    <div class="btn-group">
+      <label>Voltar ao topo</label>
+      <button>
+        <img src="assets/arrow-blue-top.svg" alt="seta para voltar ao topo">
+      </button>
+    </div>
+  </main>
   <script src="josephus.js"></script>
 </body>
 </html>
