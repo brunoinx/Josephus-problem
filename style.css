@@ -157,8 +157,8 @@ main .btn-style {
   align-items: center;
   justify-content: space-around;
 
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 6%;
   right: 2%;
 }
 
