@@ -43,7 +43,7 @@ function josephusProblem(event, soldier, k) {
 	for (let i = 1; i <= soldier; i++) qtdSoldiers.push(i);
 
 	// Uma condição que só permite iniciar o jogo com 2 pessoas ou mais
-	if (qtdSoldiers.length <= 1 || k <= 1) {
+	if (qtdSoldiers.length <= 1) {
 		resultCases.innerHTML = "";
 		orderDeaths.innerHTML = "";
 		survivor.innerHTML =  '<h3>Impossivel jogar com menos de 2 pessoas...</h3>';
