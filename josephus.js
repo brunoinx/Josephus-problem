@@ -7,10 +7,6 @@ const survivor = document.querySelector('.survivor');
 const resultCases = document.querySelector('.resultCases');
 const orderDeaths = document.querySelector('.orderDeaths');
 
-function showButtonBackTop() {
-	btnTop.classList.add("btn-style");
-}
-
 btn.addEventListener('click', josephusProblem);
 
 btnTop.addEventListener('click', () => {
@@ -21,6 +17,19 @@ btnTop.addEventListener('click', () => {
 		behavior: "smooth",
   });
 });
+
+function scrollToEnd() {
+	const btnScrollEnd = document.body.scrollHeight;
+
+  window.scrollTo({
+    top: btnScrollEnd,
+    behavior: "smooth"
+  });
+}
+
+function showButtonBackTop() {
+	btnTop.classList.add("btn-style");
+}
 
 function josephusProblem(event, soldier, k) {
 	event.preventDefault();
@@ -34,10 +43,10 @@ function josephusProblem(event, soldier, k) {
 	for (let i = 1; i <= soldier; i++) qtdSoldiers.push(i);
 
 	// Uma condição que só permite iniciar o jogo com 2 pessoas ou mais
-	if (qtdSoldiers.length <= 1) {
+	if (qtdSoldiers.length <= 1 || k <= 1) {
 		resultCases.innerHTML = "";
 		orderDeaths.innerHTML = "";
-		survivor.innerHTML =  '<h3>Impossivel jogar com menos de 2 jogadores...</h3>';
+		survivor.innerHTML =  '<h3>Impossivel jogar com menos de 2 pessoas...</h3>';
 	} else {
 		while (qtdSoldiers.length !== 1) {
 			for (let i=1; i < k; i++) {
@@ -57,13 +66,4 @@ function josephusProblem(event, soldier, k) {
 	}
 
 	scrollToEnd();
-}
-
-function scrollToEnd() {
-  const btnScrollEnd = document.body.scrollHeight;
-
-  window.scrollTo({
-    top: btnScrollEnd,
-    behavior: "smooth"
-  });
 }

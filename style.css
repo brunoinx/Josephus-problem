@@ -5,7 +5,8 @@
 }
 
 html, body {
-  background: #00C8E9;
+  background: linear-gradient(280.84deg, #3E83F8 10.86%, #00C8E9 90.14%);
+  background-size: contain no-repeat;
   width: 100%;
 }
 
@@ -15,12 +16,12 @@ main {
 
 main .container {
   background-color: #fff;
-  width: 80%;
+  width: 90%;
   height: 100%;
-  max-width: 680px;
+  max-width: 720px;
   margin: 5% auto;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 main .container section {
@@ -42,7 +43,7 @@ main .container section h1 {
 }
 
 main .container section form {
-  height: 140px;
+  height: 160px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,10 +68,10 @@ main .container section form .input-group label {
 
 main .container section form .input-group input {
   width: 36%;
-  height: 46px;
+  height: 42px;
   margin: 5px 0 8px;
   padding: 2px 8px;
-  border-radius: 16px;
+  border-radius: 10px;
   border: 2px solid #00C8E9;
   outline: 0;
   font: 1.6rem 'Ubuntu';
@@ -83,7 +84,7 @@ main .container section form .input-group input[type=number]::-webkit-inner-spin
 
 main .container section form button {
   border-radius: 8px;
-  height: 46px;
+  height: 48px;
   width: 30%;
   background: #00C8E9;
   color: #FFF;
@@ -150,8 +151,8 @@ main .btn-group {
 }
 
 main .btn-style {
-  width: 160px;
-  height: 120px;
+  width: 140px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,7 +164,7 @@ main .btn-style {
 }
 
 main .btn-group label {
-  font: 18px 'Ubuntu';
+  font: 16px 'Ubuntu';
   font-weight: bold;
   text-align: center;
   line-height: 22px;
@@ -171,8 +172,8 @@ main .btn-group label {
 }
 
 main .btn-group button {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: none;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
@@ -181,6 +182,6 @@ main .btn-group button {
 }
 
 main .btn-group button img {
-  width: 60%;
-  height: 70%;
+  width: 50%;
+  height: 60%;
 }
